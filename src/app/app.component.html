@@ -1,0 +1,214 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+  <div>
+    <ul>
+      <li id="logo"><img src="../assets/img/Logo-CO-gris.png" /></li>
+    </ul>
+  </div>
+</header>
+<div class="flotante" *ngIf="this.pantalla || this.pantallaTable">
+</div>
+<div class="contenedor" *ngIf="this.pantalla">
+  <div class="margenes">
+    <h2 id='pantallaWebHdos'>Cotiza tu Seguro Automotriz</h2>
+    <h4 id='pantallaWebHcuatro'>¡Resultados Instantàneos!</h4>
+    <div class="separadorTres col-md-12  col-lg-12   col-sm-offset-3 ">
+      <label class="UnoLabel  col-lg-6  control-label">Marca del auto:</label>
+      <label class=" col-lg-5 margen control-label">Modelo del auto:</label>
+      <select id='marca' class="UnoSelect anchoUno col-md-4  col-lg-4 ">
+          <option value=""></option>
+        <option value="volvo">Vo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+      </select>
+      <select id='modelo' class="DosSelect anchoDos col-md-4 col-lg-4 ">
+          <option value=""></option>
+        <option value="2019">Volvo</option>
+        <option value="2018">Saab</option>
+        <option value="2017">Mercedes</option>
+        <option value="2016">Audi</option>
+      </select>
+    </div>
+    <div class="separadorTres col-md-12  col-lg-12   col-sm-offset-3 ">
+      <label class="UnoLabel separador  col-lg-6  control-label">Año:</label>
+      <label class="col-lg-4 control-label">Email:</label>
+      <select id='ano' class="UnoSelect anchoTres col-md-4  col-lg-4">
+          <option value=""></option>
+        <option value="1900">1900</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+      </select>
+      <input id='email' class="DosSelect anchoCuatro col-md-4  col-lg-4" type="email" name="email">
+    </div>
+    <div class=" col-lg-12  ">
+      <div class="boton">
+        <div class="  col-lg-9 ">
+          <input type="submit" class="anchoBoton colorBoton btn  espacio " (click)='ValirdarFormulario()' value="Cotizar" id="btnGuardar">
+        </div>
+      </div>
+    </div>
+    <div class="p col-lg-12  ">
+      <div class="separadorDos margenInferior form-group">
+        <a href="#" class="control-label">Recuperar cotizaciòn</a>
+      </div>
+    </div>
+  </div>
+  <div class="exito" *ngIf='msj'>
+    <p>
+      Gracias, su cotización para el vehículo 
+      {{this.marca}}, 
+      modelo {{this.modelo}} del año {{this.ano}} 
+      se ha enviado a su correo {{this.email}} ingresado.
+    </p>
+  </div>
+  <div class="error" *ngIf='msjDos'>
+    <label>Faltan datos por llenar</label>
+  </div>
+  <div class="error" *ngIf='correoNovalida'>
+    <label>El formato del correo no es valido.</label>
+  </div>
+</div>
+<div class="contenedor" *ngIf="this.pantallaTable">
+  <div class="margenes">
+    <h2 id='pantallaTablHdos'>Cotiza tu Seguro Automotriz</h2>
+    <h4 id='pantallaTablHcuatro'>¡Resultados Instantàneos!</h4>
+    <div class="separadorTres col-md-12  col-lg-12   col-sm-offset-3 ">
+      <div class="separadorTres col-md-12  col-lg-6   col-sm-offset-3 ">
+        <label class="col-lg-6 col-md-6 control-label">Marca del auto:</label>
+        <select id='marca' class="col-md-6 col-lg-4 ">
+            <option value=""></option>
+          <option value="volvo">Vo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class=" col-md-12  col-lg-6   col-sm-offset-3 ">
+        <label class=" col-lg-4 col-md-6 control-label">Modelo del auto:</label>
+        <select id='modelo' class="  col-md-6 col-lg-4 ">
+            <option value=""></option>
+          <option value="2019">Volvo</option>
+          <option value="2018">Saab</option>
+          <option value="2017">Mercedes</option>
+          <option value="2016">Audi</option>
+        </select>
+      </div>
+    </div>
+    <div class="separadorTres col-md-12  col-lg-12   col-sm-offset-3 ">
+      <div class="separadorTres col-md-12  col-lg-6   col-sm-offset-3 ">
+        <label class="col-lg-6 col-md-6 control-label">Año:</label>
+        <select id='ano' class="col-md-3 col-lg-4 ">
+            <option value=""></option>
+          <option value="1900">1900</option>
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+        </select>
+      </div>
+      <div class=" col-md-12  col-lg-6   col-sm-offset-3 ">
+        <label class=" col-lg-4 col-md-5 control-label">Email:</label>
+        <input id='email' class="pantallaTablInput col-md-6  col-lg-4" type="email" name="email">
+      </div>
+    </div>
+    <div class=" col-lg-12  ">
+      <div class="botonTabl">
+        <div class="col-lg-9 ">
+          <input type="submit" class="anchoBoton colorBoton btn  espacio " value="Cotizar" (click)="ValirdarFormulario()" id="btnGuardar">
+        </div>
+      </div>
+    </div>
+    <div class="p col-lg-12  ">
+      <div class="separadorDos margenInferior form-group">
+        <a href="#" class="control-label">Recuperar cotizaciòn</a>
+      </div>
+    </div>
+  </div>
+  <div class="exito" *ngIf='msj'>
+    <p>
+      Gracias, su cotización para el vehículo 
+      {{this.marca}}, 
+      modelo {{this.modelo}} del año {{this.ano}} 
+      se ha enviado a su correo {{this.email}} ingresado.
+    </p>
+  </div>
+  <div class="error" *ngIf='msjDos'>
+    <label>Faltan datos por llenar</label>
+  </div>
+  <div class="error" *ngIf='correoNovalida'>
+    <label>El formato del correo no es valido.</label>
+  </div>
+</div>
+
+<div class="contenedorCel" *ngIf="this.pantallaCel">
+  <div class="espacioCel">
+    <h2 id='pantallaCelHdos'>Cotiza tu <br>
+      Seguro Automotriz</h2>
+    <h5 id='pantallaCelHCinco'>¡Resultados Instantàneos!</h5>
+  </div>
+  <div class="flotanteCel">
+  </div>
+
+  <div class="margenes">
+    <div class="separadorTres ">
+      <div class="">
+        <select id='marca' class="totalCel" required>
+          <option value="">Marca del auto</option>
+          <option value="volvo">Vo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div>
+        <select id='modelo' class="ModeloAutoCel" required>
+          <option value="">Modelo del auto</option>
+          <option value="2019">Volvo</option>
+          <option value="2018">Saab</option>
+          <option value="2017">Mercedes</option>
+          <option value="2016">Audi</option>
+        </select>
+        <select id='ano' class="anoAutoCel" required>
+            <option value="">Año</option>
+            <option value="1900">1900</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+          </select>
+      </div>
+      <div class="totalCel">
+        <label class="anoEmailCel">Email</label>
+        <input id='email' class="pantallaTablInput inputCel" type="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="  ">
+      <div class="botonTabl">
+        <div class=" ">
+          <input type="submit" class="anchoBoton colorBoton btn  espacio " value="Cotizar" (click)="ValirdarFormulario()" id="btnGuardar">
+        </div>
+      </div>
+    </div>
+    <div class="p ">
+      <div class="separadorDos margenInferior form-group">
+        <a href="#" class="control-label">Recuperar cotizaciòn</a>
+      </div>
+    </div>
+  </div>
+  <div class="exito" *ngIf='msj'>
+    <p>
+      Gracias, su cotización para el vehículo 
+      {{this.marca}}, 
+      modelo {{this.modelo}} del año {{this.ano}} 
+      se ha enviado a su correo {{this.email}} ingresado.
+    </p>
+  </div>
+  <div class="error" *ngIf='msjDos'>
+    <label>Faltan datos por llenar</label>
+  </div>
+  <div class="error" *ngIf='correoNovalida'>
+    <label>El formato del correo no es valido.</label>
+  </div>
+</div>
+

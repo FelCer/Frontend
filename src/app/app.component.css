@@ -1,0 +1,181 @@
+.contenedor{
+   position: absolute;
+    display: absolute;
+    top: 120px;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+    opacity:5;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+  }
+  /* #contenedorCel{
+    position: absolute;
+    display: absolute;
+    top: 120px;
+    margin-bottom: 10%;
+    width: 60%;
+    opacity:5;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+  } */
+#pantallaWebHdos{   
+    margin-left: 32%;
+    color: #33B5FF;
+  }
+#pantallaWebHcuatro{
+  margin-left: 43%;
+  }
+  #logo{
+    padding-left: 30%;
+    transition: color 500ms, transform 500ms;
+  }
+  
+  #logo img:hover{
+    background: transparent;
+    color:white;
+    transform:scale(1.50,1.50);
+  }
+  .UnoLabel{
+    padding-left: 32%;
+  }
+  .DosLabel{
+    padding-left: 12%;
+  }
+  .UnoSelect{
+    margin-left: 32%;
+  }
+  .DosSelect{
+    margin-left: 2%;
+  }
+  .anchoUno{
+   width: 28%;
+  }
+  .anchoDos{
+    width: 25%;
+   }
+   .anchoTres{
+    width: 18%;
+   }
+   .anchoCuatro{
+     width: 35%;
+    }
+    .separador{
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+    .margenInferior{
+      margin-bottom: 0px !important;
+    }
+    .boton{
+      margin-top:5%;
+      margin-left: 30% !important;
+    }
+    .colorBoton{
+      color: white;
+
+    }
+    .anchoBoton{
+      background-color: #FFC433 !important;
+      width: 97% !important;
+    }
+    .separadorDos{
+      margin-top: 2%;
+      margin-left: 15%;
+      padding-bottom: 5%;
+      text-align: center;
+    }
+    .separadorTres{
+      margin-top: 1%;
+    }
+    .separadorCuatro{
+      margin-top: 1%;
+    }
+    .margenes{
+      margin: 2%;
+    }
+    .flotante{
+      margin-top: 10%;
+      display: absolute;
+    	width: 100%;
+    	height: 220px;
+      color: #33B5FF;
+      background-color: #33B5FF;
+    }
+    .flotanteCel{
+    	width: 100%;
+    	height: 10px;
+      color: #33B5FF;
+      background-color: #33B5FF;
+    }
+    p{
+      padding-bottom: 5%;
+    }
+    .CincoLabel{
+      margin-left: 75px;
+    }
+    #pantallaTablHdos{
+      text-align: left;
+    }
+    #pantallaTablHdos{
+      margin-left: 2%;
+      color: #33B5FF;
+    }
+  #pantallaTablHcuatro{
+    margin-left: 27%;
+    }
+    .pantallaTablInput{
+    margin-left: 8%;
+    }
+    .anchoUnoTabl{
+      margin-left: 10px;
+     }
+     .botonTabl{
+      margin-top:5%;
+    }
+    .espacioCel{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    #pantallaCelHdos{
+      color: #33B5FF;
+      text-align: center;
+    }
+  #pantallaCelHCinco{
+    margin-left: 12%;
+    }
+    .totalCel{
+      width: 100%;
+    }
+    .ModeloAutoCel{
+      width: 60%;
+    }
+    .anoAutoCel{
+      width: 40%;
+    }
+    .anoEmailCel{
+      width: 5%;
+    }
+    .inputCel{
+      width: 87%;
+    }
+    .exito{
+      border-color: green;
+      border:1px;
+      background: green;
+      color: white;
+    }
+    .error{
+      background: black;
+      color: red;
+      border:1px;
+      border-color: red;
+    }
+    .margen{
+      padding-left: 12%;
+    }

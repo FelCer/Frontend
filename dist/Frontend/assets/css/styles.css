@@ -1,0 +1,17 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+*{
+	margin: 0px;
+	padding: 0px;
+}
+header{
+	display: block;
+	width: 100%;
+	height: 90px;
+	background:#5F5A5C;
+	/*position: fixed;*/
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  margin-top: 70px;
+}
